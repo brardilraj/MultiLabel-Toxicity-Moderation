@@ -37,15 +37,16 @@ The dataset presents a massive class imbalance (e.g., ~143,000 clean comments vs
 The model was trained and evaluated using the **[Jigsaw Toxic Comment Classification Challenge Dataset](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data)**, sourced via Kaggle. 
 
 *Note: Due to GitHub's file size constraints, the raw 153,000+ row dataset (`train.csv`) is not hosted directly in this repository. Researchers and developers can access the raw data via the Kaggle link above.*
-
 ## 📂 Repository Structure
 * `/notebooks/BiLSTM_Content_Moderation.ipynb`: The complete Google Colab Jupyter Notebook containing the data pipeline, model training, and evaluation code.
 * `/visuals/`: Directory containing project visualizations including the Model Performance Comparison chart, Dataset Distribution analysis, and the final academic presentation poster.
-* `/models/`: Contains instructions for accessing the compiled deep learning engine. 
-  * 🔗 **[Click here to download the trained Bi-LSTM model weights (.h5)](INSERT_YOUR_GOOGLE_DRIVE_OR_GITHUB_RELEASE_LINK_HERE)**.
+* **Pre-trained Model:** Due to GitHub file size limits, the final `.h5` model weights are hosted in the **[Releases](../../releases)** section of this repository.
 
 ## 🚀 Usage & Inference
 To load the pre-trained engine into a local Python environment without retraining:
+
+1. Download the `toxic_comment_bilstm.h5` file from the **[Releases](../../releases)** page.
+2. Load it into your environment using TensorFlow/Keras:
 
 ```python
 from tensorflow.keras.models import load_model
